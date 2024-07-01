@@ -72,10 +72,21 @@ public class Customer {
 
     //totalMoneySpent() : double : renvoie la somme totale de l’argent dépensé par l’utilisateur 
     public double totalMoneySpent(){
-        
+        double total = 0.0;
+        for (Reservation reservation : reservations) {
+            total += reservation.totalPrice();
+        }
+        return total;
     }
 
 
     //addReservation(reservation : Reservation) : void : ajoute une réservation au client 
-    //removeReservation(reservation :  Reservation) :  boolean,  supprime  une  reservation, renvoie VRAI si la réservation a pu être supprimée, renvoie FAUX sinon 
+    public void addReservation(Reservation reservation) {
+        this.reservations.add(reservation);
+    }
+
+    //removeReservation(reservation :  Reservation) :  boolean,  supprime  une  reservation, renvoie VRAI si la réservation a pu être supprimée, sinon renvoie FAUX 
+    public boolean removeReservation(Reservation reservation) {
+        return this.reservations.remove(reservation);
+    }
 }
