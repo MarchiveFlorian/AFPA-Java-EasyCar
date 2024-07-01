@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>315</x><y>135</y><w>189</w><h>198</h></coordinates><panel_attributes>/Vehicle/
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>315</x><y>63</y><w>189</w><h>198</h></coordinates><panel_attributes>/Vehicle/
 --
 - brand: String
 - model: String
@@ -8,7 +8,7 @@
 --
 + constructors
 + getters/setters
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>972</x><y>135</y><w>333</w><h>198</h></coordinates><panel_attributes>Customer
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>972</x><y>63</y><w>333</w><h>198</h></coordinates><panel_attributes>Customer
 --
 - firstName: String
 - lastName: String
@@ -21,7 +21,7 @@
 
 + totalMoneySpent(): double
 + addReservation(reservation: Reservation): void
-+ removeReservation(reservation: Reservation): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>639</x><y>135</y><w>189</w><h>198</h></coordinates><panel_attributes>Reservation
++ removeReservation(reservation: Reservation): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>639</x><y>63</y><w>189</w><h>198</h></coordinates><panel_attributes>Reservation
 --
 - startDate: LocalDate
 - endDate: LocalDate
@@ -31,32 +31,32 @@
 + getters/setters
 
 + totalPrice(): double
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>495</x><y>189</y><w>162</w><h>45</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>495</x><y>117</y><w>162</w><h>45</h></coordinates><panel_attributes>lt=-
 m1=0..n
 m2=1..1
-&lt; concerns</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>819</x><y>189</y><w>171</w><h>45</h></coordinates><panel_attributes>lt=-
+&lt; concerns</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>819</x><y>117</y><w>171</w><h>45</h></coordinates><panel_attributes>lt=-
 m1=1..1
 m2=0..n
 &lt; makes
-</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>54</x><y>630</y><w>189</w><h>90</h></coordinates><panel_attributes>Car
+</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>54</x><y>558</y><w>189</w><h>90</h></coordinates><panel_attributes>Car
 --
 - seats: int
 --
 + constructors
 + getters/setters
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>297</x><y>630</y><w>189</w><h>90</h></coordinates><panel_attributes>Truck
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>297</x><y>558</y><w>189</w><h>90</h></coordinates><panel_attributes>Truck
 --
 - cargoCapactiy: double
 --
 - constructors
 - getters/setters
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>495</x><y>423</y><w>189</w><h>90</h></coordinates><panel_attributes>Bike
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>495</x><y>351</y><w>189</w><h>90</h></coordinates><panel_attributes>Bike
 --
 - size: char
 --
 - constructors
 - getters/setters
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>441</x><y>324</y><w>108</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>126</x><y>423</y><w>288</w><h>153</h></coordinates><panel_attributes>/MotorizedVehicle/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>441</x><y>252</y><w>108</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>126</x><y>351</y><w>288</w><h>153</h></coordinates><panel_attributes>/MotorizedVehicle/
 --
 - fuelType: Enum["Essence", "Diesel", "Electric"]
 - fuelConsumption: int
@@ -64,4 +64,4 @@ m2=0..n
 --
 + constructors
 + getters/setters
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>279</x><y>324</y><w>117</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>144</x><y>567</y><w>108</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>567</y><w>135</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;130;70</additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>279</x><y>252</y><w>117</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>144</x><y>495</y><w>108</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>495</y><w>135</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;130;70</additional_attributes></element></diagram>
