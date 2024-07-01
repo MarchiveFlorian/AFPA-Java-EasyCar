@@ -1,6 +1,7 @@
 package fr.afpa;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public abstract class Vehicle {
 
@@ -10,6 +11,7 @@ public abstract class Vehicle {
     private String color;
     private LocalDate buyingDate;
     private double pricePerDay;
+    private ArrayList<Reservation> reservations = new ArrayList<Reservation>();
 
     // Constructors
     public Vehicle(String brand, String model, String color, LocalDate buyingDate, double pricePerDay) {

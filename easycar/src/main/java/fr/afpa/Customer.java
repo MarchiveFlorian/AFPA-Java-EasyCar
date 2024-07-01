@@ -1,14 +1,18 @@
 package fr.afpa;
 
+import java.util.ArrayList;
+
 public class Customer {
 
-    //Attributs
+    // Attributs
     private String firstName;
     private String lastName;
     private String address;
     private String city;
     private String postalCode;
-    //Constructors
+    private ArrayList<Reservation> reservations = new ArrayList<Reservation>();
+
+    // Constructors
     public Customer(String firstName, String lastName, String address, String city, String postalCode) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -16,38 +20,49 @@ public class Customer {
         this.city = city;
         this.postalCode = postalCode;
     }
-    //Getters & Setters
+
+    // Getters & Setters
     public String getFirstName() {
         return firstName;
     }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
     public String getLastName() {
         return lastName;
     }
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
     public String getAddress() {
         return address;
     }
+
     public void setAddress(String address) {
         this.address = address;
     }
+
     public String getCity() {
         return city;
     }
+
     public void setCity(String city) {
         this.city = city;
     }
+
     public String getPostalCode() {
         return postalCode;
     }
+
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
-    //Méthodes
+
+    // Méthodes
     @Override
     public String toString() {
         return "Customer [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city=" + city
@@ -55,6 +70,12 @@ public class Customer {
     }
 
 
+    //totalMoneySpent() : double : renvoie la somme totale de l’argent dépensé par l’utilisateur 
+    public double totalMoneySpent(){
+        
+    }
 
-    
+
+    //addReservation(reservation : Reservation) : void : ajoute une réservation au client 
+    //removeReservation(reservation :  Reservation) :  boolean,  supprime  une  reservation, renvoie VRAI si la réservation a pu être supprimée, renvoie FAUX sinon 
 }

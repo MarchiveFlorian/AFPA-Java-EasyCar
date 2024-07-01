@@ -1,6 +1,7 @@
 package fr.afpa;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Reservation {
 
@@ -8,6 +9,7 @@ public class Reservation {
     private LocalDate starDate;
     private LocalDate endDate;
     private boolean paid;
+    private Vehicle vehicle;
 
     // Constructors
     public Reservation(LocalDate starDate, LocalDate endDate, boolean paid) {
@@ -47,4 +49,10 @@ public class Reservation {
         return "Reservation [starDate=" + starDate + ", endDate=" + endDate + ", paid=" + paid + "]";
     }
 
+    // totalPrice() : double » : permet de retrouver le prix total d’une réservation pour la période de temps de la réservation.
+    public double totalPrice(){
+        long locationDays = ChronoUnit.DAYS.between(this.starDate, this.endDate);
+        double dayPrice = this.vehicle.getPricePerDay();
+        return locationDays*dayPrice;
+    }
 }
