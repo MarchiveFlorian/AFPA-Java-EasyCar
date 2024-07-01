@@ -1,5 +1,42 @@
 package fr.afpa;
 
-public class MotorizedVehicle {
-    
+import java.time.LocalDate;
+
+public abstract class MotorizedVehicle extends Vehicle {
+
+    // Attributs
+    private enum FuelType {
+        ESSENCE,
+        DIESEL,
+        ELECTRIC;
+    }
+
+    private int fuelConsumption;
+    private boolean integratedGPS;
+
+    // Constructor
+    public MotorizedVehicle(String brand, String model, String color, LocalDate buyingDate, double pricePerDay,
+            int fuelConsumption, boolean integratedGPS) {
+        super(brand, model, color, buyingDate, pricePerDay);
+        this.fuelConsumption = fuelConsumption;
+        this.integratedGPS = integratedGPS;
+    }
+
+    // Getters & Setters
+    public int getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public void setFuelConsumption(int fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
+    public boolean isIntegratedGPS() {
+        return integratedGPS;
+    }
+
+    public void setIntegratedGPS(boolean integratedGPS) {
+        this.integratedGPS = integratedGPS;
+    }
+
 }
