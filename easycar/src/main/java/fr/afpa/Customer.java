@@ -69,24 +69,41 @@ public class Customer {
                 + ", postalCode=" + postalCode + "]";
     }
 
-
-    //totalMoneySpent() : double : renvoie la somme totale de l’argent dépensé par l’utilisateur 
-    public double totalMoneySpent(){
+    // totalMoneySpent() : double : renvoie la somme totale de l’argent dépensé par
+    // l’utilisateur
+    public double totalMoneySpent() {
         double total = 0.0;
         for (Reservation reservation : reservations) {
             total += reservation.totalPrice();
         }
+        System.out.println("Le client a dépensé : " + total);
         return total;
     }
 
-
-    //addReservation(reservation : Reservation) : void : ajoute une réservation au client 
+    // addReservation(reservation : Reservation) : void : ajoute une réservation au
+    // client
     public void addReservation(Reservation reservation) {
-        this.reservations.add(reservation);
+        // Vérifier si la réservation n'existe pas déjà
+        if (!reservations.contains(reservation)) {
+            reservations.add(reservation);
+            System.out.println("La réservation : " + reservation + " a été ajoutée pour le client : " + this.firstName + " " + this.lastName);
+        } else {
+            System.out.println("La réservation : " + reservation + " existe déjà pour le client : " + this.firstName + " " + this.lastName);
+        }
     }
 
-    //removeReservation(reservation :  Reservation) :  boolean,  supprime  une  reservation, renvoie VRAI si la réservation a pu être supprimée, sinon renvoie FAUX 
+    // removeReservation(reservation : Reservation) : boolean, supprime une
+    // reservation, renvoie VRAI si la réservation a pu être supprimée, sinon
+    // renvoie FAUX
     public boolean removeReservation(Reservation reservation) {
-        return this.reservations.remove(reservation);
+        // Vérifier si la réservation existe dans la liste
+        if (reservations.contains(reservation)) {
+            System.out.println("La réservation : " + reservation + " a été retirée pour le client : " + this.firstName + " " + this.lastName);
+            reservations.remove(reservation);
+            return true;
+        } else {
+            System.out.println("La réservation : " + reservation + " n'a pas été trouvée pour le client : " + this.firstName + " " + this.lastName);
+            return false;
+        }
     }
 }
